@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #ec6ead, #3494e6);
+            color: #000;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px; 
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        label,
+        input,
+        button,
+        p,
+        a {
+            color: #000;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #3494e6;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3494e6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #27679f;
+        }
+
+        .ip-address-container {
+            text-align: center;
+            margin-bottom: 20px;
+            white-space: nowrap; 
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #d3d3d3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="currentDateTime"></div>
+
+        <script>
+            const dateTimeElement = document.getElementById('currentDateTime');
+            const currentDateTime = new Date().toLocaleString();
+
+            dateTimeElement.textContent = currentDateTime;
+        </script>
+
+        <div class="ip-address-container">
+            <h1>Your IP address is: <span id="ip-address"></span></h1>
+        </div>
+
+        <script>
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip-address').textContent = data.ip;
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                });
+        </script>
+
+        <h2>Login</h2>
+        <form action="/users/login" method="post">
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <p>Don't have an account? <a href="/users/signup">Sign-up</a></p>
+    </div>
+</body>
+
+</html>

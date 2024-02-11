@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Exchange Platform - Add New Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="p-3 mb-2 bg-info">
+    <div id="currentDateTime"></div>
+ 
+    <script>
+        const dateTimeElement = document.getElementById('currentDateTime');
+        const currentDateTime = new Date().toLocaleString();
+ 
+        dateTimeElement.textContent = currentDateTime;
+    </script>
+
+    <h1>Your IP address is: <span id="ip-address"></span></h1>
+    
+    <script>
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip-address').textContent = data.ip;
+            })
+            .catch(error => {
+                console.error('Error fetching IP address:', error);
+            });
+    </script>
+    <header>
+        <h1>Add a New Book for Exchange</h1>
+        <nav>
+            <% if (user) { %>
+                Welcome, <%= user.username %>!
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+            <% } else { %>
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+            <% } %>
+        </nav>
+    </header>
+
+    <section>
+        <form action="/books/add" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" required>
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" name="author" required>
+            </div>
+            <div>
+                <label for="genre">Genre:</label>
+                <input type="text" name="genre" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <textarea name="description" rows="5" required></textarea>
+            </div>
+            <div>
+                <label for="bookCover">Book Cover:</label>
+                <input type="file" name="bookCover">
+            </div>
+            <div>
+                <button type="submit">Add Book</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Book Exchange Platform &copy; 2023</p>
+    </footer>
+</body>
+</html>

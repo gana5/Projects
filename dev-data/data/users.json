@@ -1,0 +1,65 @@
+[
+  {
+    "name": "dxs sthapit",
+    "email": "admin@dxs.io",
+    "role": "admin",
+    "active": true,
+    "password": "password12345",
+    "passwordConfirm": "password12345"
+  },
+  {
+    "name": "David James",
+    "email": "djames@dxs.com",
+    "role": "user",
+    "active": true,
+    "password": "password12345",
+    "passwordConfirm": "password12345"
+  },
+  {
+    "name": "Mary Smith",
+    "email": "Msmith@dxs.com",
+    "role": "user",
+    "active": true,
+    "password": "password12345",
+    "passwordConfirm": "password12345"
+  },
+  {
+    "name": "John Doe",
+    "email": "jdoe@dxs.com",
+    "role": "user",
+    "active": true,
+    "password": "password12345"
+  },
+  {
+    "name": "Jane Doe",
+    "email": "Jane.Doe@examdxsple.com",
+    "role": "instructor",
+    "active": true,
+    "password": "password12345",
+    "passwordConfirm": "password12345"
+  },
+  {
+    "name": "Jennifer Hardy",
+    "email": "jennifer@example.com",
+    "role": "instructor",
+    "active": true,
+    "password": "password12345",
+    "passwordConfirm": "password12345"
+  },
+  {
+    "name": "Kate Moore",
+    "email": "kate.More@dxs.com",
+    "role": "instructor",
+    "active": true,
+    "password": "password12345",
+    "passwordConfirm": "password12345"
+  },
+  {
+    "name": "Jean Morrison",
+    "email": "JMorisson@example.com",
+    "role": "user",
+    "active": true,
+    "password": "password12345",
+    "passwordConfirm": "password12345"
+  }
+]
