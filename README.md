@@ -32,25 +32,25 @@ Bookswap Hub seamlessly integrates technology and literature, providing users wi
 The project aims to create a user-friendly platform for book enthusiasts, focusing on secure authentication and CRUD operations for efficient book management. The chosen technology stack supports scalability, flexible data modeling, and secure authentication.
 
 ## Screenshots
-Added a book:
+### Added a book:
 <img width="866" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/40c43b52-6ed2-45c2-9194-1c4efcddd6ab">
 
-Add new book (POST):
+### Add new book (POST):
 <img width="293" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/51ed3142-0fe6-4533-be57-fdc5fd64dee0">
 
-GET all books:
+### GET all books:
 <img width="868" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/68854308-938d-4698-952d-dc7e8c3271ed">
 
-Updating Book 1(PUT):
+### Updating Book 1(PUT):
 <img width="536" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/b0955c22-0508-4f25-b45f-613db02e66e8">
 
-GET after PUT:
+### GET after PUT:
 <img width="868" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/fb049264-4335-4d54-8419-6fdfa8f5356c">
 
-DELETE 2nd book:
+### DELETE 2nd book:
 <img width="864" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/8839a259-4627-4332-9e0e-8ff8dd892bb8">
 
-GET after DELETE:
+### GET after DELETE:
 <img width="869" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/1443ba85-e871-4ba5-9a45-25a872f3b2c1">
 
 ## Implementation
