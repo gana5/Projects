@@ -1,13 +1,11 @@
 # Bookswap Hub
 
 Architecture Diagram:
-![image](https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/2be543cc-0795-4b2c-8510-738ecbb87b8e)
-
-Sequence Diagram:
-![image](https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/1a39e4d0-0ae3-42b9-ab04-78d635961467)
+<img width="856" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/44b20f4e-dc9a-45d7-975e-57dca81a5756">
 
 Bookswap UI:
-![image](https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/12f82a84-d036-4375-9c30-fc3890e5f9d1)
+<img width="1332" alt="image" src="https://github.com/ganavihemachandra/Bookswap-Hub/assets/85887828/a23002c7-989f-48d8-bbca-5a77ce268dcd">
+
 
 
 Table of Contents
